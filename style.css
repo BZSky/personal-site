@@ -1,0 +1,99 @@
+body,
+html {
+    height: 100%;
+    background-color: rgb(189, 4, 4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* @keyframes fadeIn {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+} */
+
+.card {
+    background-color: #c21919;
+    gap: 20px;
+    padding-left: 20px;
+    border-radius: 20px;
+    width: 80%;
+    min-width: 300px;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    overflow: hidden;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* @keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff;
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: scale(1.1);
+        box-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff;
+    }
+}
+
+.card:hover {
+    animation: sparkle 1s ease-in-out infinite;
+} */
+
+.info {
+    grid-template-areas: "name-job" "description" "contacts";
+}
+
+.name-job {
+    grid-area: name-job;
+}
+
+.description {
+    grid-area: description;
+}
+
+.contacts {
+    grid-area: contacts;
+}
+
+h1,
+h2 {
+    margin: 0;
+}
+
+.portrait {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media (max-width: 800px) {
+
+    .card {
+        grid-template-columns: 1fr;
+        grid-template-areas: "portrait" "info";
+        padding: 0;
+    }
+
+    .info {
+        text-align: center;
+        padding: 10px;
+    }
+}
